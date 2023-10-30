@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.5.final using JasperReports Library version 6.20.5-3efcf2e67f959db3888d79f73dde2dbd7acb4f8e  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SolicitacoesMaterial" pageWidth="842" pageHeight="595" orientation="Landscape" whenNoDataType="NoDataSection" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7c6a6e76-5ed9-4f1e-ac9f-f937cf7a4741">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Banco TI"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString>
+		<![CDATA[SELECT * FROM bd_estoque.solicitacao_compra]]>
+	</queryString>
+	<field name="ID" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="ID"/>
+		<property name="com.jaspersoft.studio.field.label" value="ID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="solicitacao_compra"/>
+	</field>
+	<field name="EQUIPAMENTO" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="EQUIPAMENTO"/>
+		<property name="com.jaspersoft.studio.field.label" value="EQUIPAMENTO"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="solicitacao_compra"/>
+	</field>
+	<field name="QUANTIDADE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="QUANTIDADE"/>
+		<property name="com.jaspersoft.studio.field.label" value="QUANTIDADE"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="solicitacao_compra"/>
+	</field>
+	<field name="SETOR" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="SETOR"/>
+		<property name="com.jaspersoft.studio.field.label" value="SETOR"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="solicitacao_compra"/>
+	</field>
+	<field name="SOLICITANTE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="SOLICITANTE"/>
+		<property name="com.jaspersoft.studio.field.label" value="SOLICITANTE"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="solicitacao_compra"/>
+	</field>
+	<field name="DESCRICAO" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="DESCRICAO"/>
+		<property name="com.jaspersoft.studio.field.label" value="DESCRICAO"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="solicitacao_compra"/>
+	</field>
+	<field name="TECNICO" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="TECNICO"/>
+		<property name="com.jaspersoft.studio.field.label" value="TECNICO"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="solicitacao_compra"/>
+	</field>
+	<field name="DATA" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="DATA"/>
+		<property name="com.jaspersoft.studio.field.label" value="DATA"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="solicitacao_compra"/>
+	</field>
+	<field name="STATUS" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="STATUS"/>
+		<property name="com.jaspersoft.studio.field.label" value="STATUS"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="solicitacao_compra"/>
+	</field>
+	<variable name="Sequencia" class="java.lang.Integer" calculation="Count">
+		<variableExpression><![CDATA[$F{ID}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="80" splitType="Stretch">
+			<staticText>
+				<reportElement x="-20" y="20" width="842" height="30" uuid="0ee70545-1f04-4c6a-b831-97b71333688a"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Relatório - Solicitaçõs de Materiais]]></text>
+			</staticText>
+			<image>
+				<reportElement x="-10" y="10" width="60" height="44" uuid="9e755735-50f4-424b-bcf3-2168e014d006"/>
+				<imageExpression><![CDATA["Dpadua/Suporte/ico/PROFE.jpeg"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="750" y="10" width="60" height="44" uuid="129f9b20-913c-431b-9154-8040c9b7442b"/>
+				<imageExpression><![CDATA["Dpadua/Suporte/ico/DPADUA.jpeg"]]></imageExpression>
+			</image>
+			<line>
+				<reportElement x="-20" y="79" width="842" height="1" uuid="64d5f9c3-edbc-404a-99d6-b108751dabac"/>
+				<graphicElement>
+					<pen lineWidth="4.0" lineStyle="Solid"/>
+				</graphicElement>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="31" splitType="Stretch">
+			<rectangle>
+				<reportElement mode="Opaque" x="-20" y="-1" width="842" height="32" forecolor="#FFFFFF" backcolor="#1849AB" uuid="13580b02-de2f-4507-8957-6338005c7614"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="-20" y="0" width="20" height="30" forecolor="#FFFFFF" uuid="8929429b-de16-4b5d-901b-c2825179aa06"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="140" height="30" forecolor="#FFFFFF" uuid="b3189e3b-40bf-4c65-86f5-ac40cfba21f9"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[EQUIPAMENTO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="140" y="1" width="70" height="30" forecolor="#FFFFFF" uuid="6f10248d-c3d8-465c-a0b9-5f981a8a0bb5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[QUANTIDADE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="210" y="1" width="80" height="30" forecolor="#FFFFFF" uuid="af4652ea-aae6-46c8-95fa-6a1bd4bbf315"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[SETOR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="1" width="100" height="30" forecolor="#FFFFFF" uuid="5896703d-d0af-410a-a189-8dfd68bbb134"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[SOLICITANTE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="390" y="1" width="154" height="30" forecolor="#FFFFFF" uuid="12ddf7c2-d84e-4984-801d-312111f38de6"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[DESCRICAO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="544" y="1" width="100" height="30" forecolor="#FFFFFF" uuid="08ee98ef-03b5-401f-8364-51735b0b38e1"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[TECNICO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="644" y="1" width="100" height="30" forecolor="#FFFFFF" uuid="9911e56e-9905-415b-9ad9-4432f5652813"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[DATA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="744" y="-1" width="78" height="30" forecolor="#FFFFFF" uuid="72e13896-cc64-4780-a393-98dd152d32ee"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[STATUS]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="31" splitType="Stretch">
+			<textField>
+				<reportElement x="-20" y="-1" width="20" height="30" uuid="df8e2ba6-e411-4919-8f17-dd3da32cafbf"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$V{Sequencia}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="-1" width="140" height="30" uuid="67417a20-cdfb-43eb-b63f-0ea773eba29c"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{EQUIPAMENTO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="140" y="-1" width="70" height="30" uuid="7f7f8cb2-32f8-4b6e-9320-7f340c7094ed"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{QUANTIDADE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="210" y="-1" width="80" height="30" uuid="24122aec-586f-4d20-a10f-0c1df3ab4191"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{SETOR}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="290" y="-1" width="100" height="30" uuid="e5631de5-f3f7-4fe9-a066-ba85f4eb6575"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{SOLICITANTE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="390" y="-1" width="154" height="30" uuid="092932c2-b9b0-4e46-890b-85a3bce2d504"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{DESCRICAO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="544" y="-1" width="100" height="30" uuid="b49a225e-5dcf-4931-b73a-8ad4526ba8f5"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{TECNICO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="644" y="0" width="100" height="30" uuid="2d2ab4ff-0c10-4ede-a176-96571e29c91d"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("dd/MM/yyyy").format($F{DATA})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="744" y="0" width="78" height="30" uuid="bcb2dbb7-9f8e-4c83-bd98-c789251a918e"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{STATUS}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="-20" y="30" width="842" height="1" uuid="626ffb05-6b55-4587-b973-0414d1aa1cc4"/>
+			</line>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="19" splitType="Stretch">
+			<textField>
+				<reportElement x="709" y="0" width="72" height="19" forecolor="#030202" uuid="3bc1a245-e5b4-439b-955c-123a2488afa0"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Página "+$V{PAGE_NUMBER}+" de"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="781" y="0" width="40" height="19" forecolor="#030202" uuid="90896471-9aa0-4953-bd2a-e73aa7730283"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<noData>
+		<band height="54">
+			<staticText>
+				<reportElement x="-20" y="24" width="842" height="30" uuid="d8cac01b-dfd5-4ce6-931a-ab1f00c25b86"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sem resultados]]></text>
+			</staticText>
+			<image>
+				<reportElement x="750" y="10" width="60" height="44" uuid="7d3c7b44-387f-47e6-ad68-e43cb654c517"/>
+				<imageExpression><![CDATA["Dpadua/Suporte/ico/DPADUA.jpeg"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="-10" y="10" width="60" height="44" uuid="cc1891d8-5aac-4b99-8a09-6d5e9976d866"/>
+				<imageExpression><![CDATA["Dpadua/Suporte/ico/PROFE.jpeg"]]></imageExpression>
+			</image>
+		</band>
+	</noData>
+</jasperReport>
