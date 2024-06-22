@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.1.final using JasperReports Library version 6.21.0-4f56c4f36cd19e17675219a9ac4692d5f0f13b06  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="RelatorioDeEstoque" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="af23279f-ab0e-4689-9c61-8b909280c043">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Banco 218"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<subDataset name="Equipamentos" uuid="c2d5847d-8bd2-47fb-b78b-572b8a086c31">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Banco TI"/>
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<queryString>
+			<![CDATA[SELECT * FROM bd_estoque.cadastro_equipamento ORDER BY EQUIPAMENTO ASC]]>
+		</queryString>
+		<field name="ID" class="java.lang.Integer">
+			<property name="com.jaspersoft.studio.field.name" value="ID"/>
+			<property name="com.jaspersoft.studio.field.label" value="ID"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="cadastro_equipamento"/>
+		</field>
+		<field name="EQUIPAMENTO" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="EQUIPAMENTO"/>
+			<property name="com.jaspersoft.studio.field.label" value="EQUIPAMENTO"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="cadastro_equipamento"/>
+		</field>
+		<field name="DESCRICAO" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="DESCRICAO"/>
+			<property name="com.jaspersoft.studio.field.label" value="DESCRICAO"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="cadastro_equipamento"/>
+		</field>
+		<variable name="ID1" class="java.lang.Integer" calculation="Count">
+			<variableExpression><![CDATA[$F{ID}]]></variableExpression>
+		</variable>
+		<variable name="Sequencia" class="java.lang.Integer" calculation="Count">
+			<variableExpression><![CDATA[$F{ID}]]></variableExpression>
+		</variable>
+	</subDataset>
+	<queryString>
+		<![CDATA[SELECT ID, FULL_NAME, GMAIL, USERNAME, FULL_ACCESS, USER_TYPE, BLOCKED FROM bd_estoque.user WHERE USERNAME <> 'ADM' ORDER BY ID ASC]]>
+	</queryString>
+	<field name="ID" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="ID"/>
+		<property name="com.jaspersoft.studio.field.label" value="ID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="user"/>
+	</field>
+	<field name="FULL_NAME" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="FULL_NAME"/>
+		<property name="com.jaspersoft.studio.field.label" value="FULL_NAME"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="user"/>
+	</field>
+	<field name="GMAIL" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="GMAIL"/>
+		<property name="com.jaspersoft.studio.field.label" value="GMAIL"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="user"/>
+	</field>
+	<field name="USERNAME" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="USERNAME"/>
+		<property name="com.jaspersoft.studio.field.label" value="USERNAME"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="user"/>
+	</field>
+	<field name="FULL_ACCESS" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="FULL_ACCESS"/>
+		<property name="com.jaspersoft.studio.field.label" value="FULL_ACCESS"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="user"/>
+	</field>
+	<field name="USER_TYPE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="USER_TYPE"/>
+		<property name="com.jaspersoft.studio.field.label" value="USER_TYPE"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="user"/>
+	</field>
+	<field name="BLOCKED" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="BLOCKED"/>
+		<property name="com.jaspersoft.studio.field.label" value="BLOCKED"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="user"/>
+	</field>
+	<variable name="Sequencia" class="java.lang.Integer" calculation="Count">
+		<variableExpression><![CDATA[$F{ID}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="-8" y="24" width="570" height="30" uuid="3aa5803a-5fdf-4652-9b62-2638fd0d1868"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Usuário(s) Cadastrado(s)]]></text>
+			</staticText>
+			<line>
+				<reportElement x="-20" y="74" width="595" height="1" uuid="a7acc5ee-d949-4fee-9065-bc39cda04177"/>
+				<graphicElement>
+					<pen lineWidth="4.0" lineStyle="Solid"/>
+				</graphicElement>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="31" splitType="Stretch">
+			<rectangle>
+				<reportElement mode="Opaque" x="-20" y="-1" width="595" height="32" forecolor="#FFFFFF" backcolor="#1849AB" uuid="f490fb07-a58c-40e0-886c-cc5536cd09de"/>
+			</rectangle>
+			<line>
+				<reportElement x="-20" y="30" width="595" height="1" uuid="f53451cb-8e08-4af2-ac35-95efc435e5b3"/>
+			</line>
+			<staticText>
+				<reportElement x="0" y="0" width="230" height="30" forecolor="#FFFFFF" backcolor="#FFFFFF" uuid="a0513ba5-a479-47cb-a88a-b6f1512485ad"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[NOME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="240" y="0" width="100" height="30" forecolor="#FFFFFF" backcolor="#FFFFFF" uuid="5993601d-cdc7-487f-bc2d-7bf475d59786"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[ACESSO TOTAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="350" y="0" width="100" height="30" forecolor="#FFFFFF" backcolor="#FFFFFF" uuid="a6ead11a-d56f-4122-8c2e-121c94f80157"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[TIPO DE USUÁRIO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="460" y="0" width="112" height="30" forecolor="#FFFFFF" backcolor="#FFFFFF" uuid="501b5c19-a0d5-4a87-8120-2be855d67f2e"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[BLOQUEADO]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="47">
+			<line>
+				<reportElement x="-20" y="30" width="595" height="1" uuid="78489d54-c3e2-4309-ae5a-6df01777a2af"/>
+			</line>
+			<textField>
+				<reportElement x="0" y="1" width="230" height="30" uuid="03295bc5-7404-44fe-a052-ffe10ac0afb3"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{FULL_NAME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="240" y="1" width="84" height="30" uuid="ff5acb5d-f16c-4d0c-b91b-b7a3b430a863"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{FULL_ACCESS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="350" y="1" width="84" height="30" uuid="ee1d5325-524f-43ce-9c63-9d0d99067ab0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{USER_TYPE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="460" y="1" width="60" height="30" uuid="76671766-7c4f-4b6b-8ffd-3b7e55b6bf42"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{BLOCKED} == 0 ? "Não" : "Sim"]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="19" splitType="Stretch">
+			<textField>
+				<reportElement x="460" y="0" width="72" height="19" forecolor="#030202" uuid="17289f36-af7d-419c-92db-1c4790a3c500"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Página "+$V{PAGE_NUMBER}+" de"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="532" y="0" width="40" height="19" forecolor="#030202" uuid="84d4842e-bf5f-4fa4-b9cb-48bbd3c4b249"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+	<noData>
+		<band height="54">
+			<staticText>
+				<reportElement x="-8" y="24" width="570" height="30" uuid="8c3958ab-f5c2-481c-80b8-25183cd1ff9d"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sem resultados]]></text>
+			</staticText>
+		</band>
+	</noData>
+</jasperReport>

@@ -1,0 +1,57 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="TechStockMaster:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/TechStockMaster_jar</output-path>
+    <root id="archive" name="TechStockMaster.jar">
+      <element id="module-output" name="TechStockMaster" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/bibliotecas/jasper/spring-beans-6.0.11.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/bibliotecas/jasper/poi-excelant-5.2.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/bibliotecas/gmail/javax-inject.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/bibliotecas/gmail/javax.ejb.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/bibliotecas/conectores/mysql-connector-j-8.0.33.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/bibliotecas/jasper/commons-codec-1.16.0-tests.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/bibliotecas/jasper/jxl-2.6.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/bibliotecas/jasper/jasperreports-castor-6.20.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/bibliotecas/jasper/jasperreports-6.20.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/bibliotecas/jasper/commons-codec-1.15.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/bibliotecas/jasper/commons-codec-1.16.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/bibliotecas/jasper/xmlbeans-5.1.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/bibliotecas/jasper/spring-core-6.0.11.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/bibliotecas/gmail/mail.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/bibliotecas/jasper/commons-math3-3.6.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/bibliotecas/jasper/ant-1.10.12.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/bibliotecas/jasper/xmlbeans.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/bibliotecas/jasper/jasperreports-javaflow-6.20.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/bibliotecas/jasper/SparseBitSet-1.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/bibliotecas/jasper/spring-jcl-6.0.11.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/bibliotecas/jasper/jasperreports-annotation-processors-6.20.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/bibliotecas/jasper/curvesapi-1.07.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/bibliotecas/jasper/commons-digester-2.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/bibliotecas/combobox/swingx-all-1.6.4.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/bibliotecas/jasper/poi-ooxml-lite-5.2.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/bibliotecas/jasper/commons-io-2.11.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/bibliotecas/gmail/javax.faces-api-2.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/bibliotecas/jasper/commons-collections4-4.4.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/bibliotecas/jasper/ant-launcher-1.10.12.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/bibliotecas/jasper/poi-ooxml-5.2.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/bibliotecas/jasper/jcommon-1.0.23.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/bibliotecas/jasper/iText-2.1.7.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/bibliotecas/jasper/commons-digester3-3.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/bibliotecas/jasper/jasperreports-chart-customizers-6.20.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/bibliotecas/conectores/ojdbc11.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/bibliotecas/jasper/poi-5.2.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/bibliotecas/gmail/javax.activation-1.1.0.v201105071233.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/bibliotecas/jasper/log4j-api-2.18.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/bibliotecas/jasper/commons-collections4-4.4-tests.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/bibliotecas/jasper/commons-digester3-3.2-with-deps.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/bibliotecas/jasper/log4j-core-2.20.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/bibliotecas/jasper/commons-compress-1.21.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/bibliotecas/jasper/jasperreports-chart-themes-6.20.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/bibliotecas/jasper/commons-logging-1.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/bibliotecas/jasper/jasperreports-functions-6.20.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/bibliotecas/conectores/ojdbc8.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/bibliotecas/jasper/jasperreports-custom-visualization-6.20.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/bibliotecas/jasper/jasperreports-metadata-6.20.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/bibliotecas/jasper/jfreechart-1.0.19.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

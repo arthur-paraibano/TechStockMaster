@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.1.final using JasperReports Library version 6.21.0-4f56c4f36cd19e17675219a9ac4692d5f0f13b06  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="RelatorioDeEstoque" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="af23279f-ab0e-4689-9c61-8b909280c043">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Banco 218"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<subDataset name="Equipamentos" uuid="c2d5847d-8bd2-47fb-b78b-572b8a086c31">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Banco TI"/>
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<queryString>
+			<![CDATA[SELECT * FROM bd_estoque.cadastro_equipamento ORDER BY EQUIPAMENTO ASC]]>
+		</queryString>
+		<field name="ID" class="java.lang.Integer">
+			<property name="com.jaspersoft.studio.field.name" value="ID"/>
+			<property name="com.jaspersoft.studio.field.label" value="ID"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="cadastro_equipamento"/>
+		</field>
+		<field name="EQUIPAMENTO" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="EQUIPAMENTO"/>
+			<property name="com.jaspersoft.studio.field.label" value="EQUIPAMENTO"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="cadastro_equipamento"/>
+		</field>
+		<field name="DESCRICAO" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="DESCRICAO"/>
+			<property name="com.jaspersoft.studio.field.label" value="DESCRICAO"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="cadastro_equipamento"/>
+		</field>
+		<variable name="ID1" class="java.lang.Integer" calculation="Count">
+			<variableExpression><![CDATA[$F{ID}]]></variableExpression>
+		</variable>
+		<variable name="Sequencia" class="java.lang.Integer" calculation="Count">
+			<variableExpression><![CDATA[$F{ID}]]></variableExpression>
+		</variable>
+	</subDataset>
+	<queryString>
+		<![CDATA[SELECT ED.ID AS ID, CODIGO, EQUIPAMENTO, UND, STATUS, S.NOME AS SETOR, concat(ABREV_TAG,'-',LPAD(TAG_SEQ+1,3,0)) AS NOVA_TAG FROM bd_estoque.equipamento ED LEFT JOIN  bd_estoque.tag T ON FK_TAG = T.ID LEFT JOIN bd_estoque.setor S ON ID_CODSETOR = S.ID]]>
+	</queryString>
+	<field name="ID" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="ID"/>
+		<property name="com.jaspersoft.studio.field.label" value="ID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="equipamento"/>
+	</field>
+	<field name="CODIGO" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="CODIGO"/>
+		<property name="com.jaspersoft.studio.field.label" value="CODIGO"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="equipamento"/>
+	</field>
+	<field name="EQUIPAMENTO" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="EQUIPAMENTO"/>
+		<property name="com.jaspersoft.studio.field.label" value="EQUIPAMENTO"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="equipamento"/>
+	</field>
+	<field name="UND" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="UND"/>
+		<property name="com.jaspersoft.studio.field.label" value="UND"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="equipamento"/>
+	</field>
+	<field name="STATUS" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="STATUS"/>
+		<property name="com.jaspersoft.studio.field.label" value="STATUS"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="equipamento"/>
+	</field>
+	<field name="SETOR" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="NOME"/>
+		<property name="com.jaspersoft.studio.field.label" value="SETOR"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="setor"/>
+	</field>
+	<field name="NOVA_TAG" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="NOVA_TAG"/>
+		<property name="com.jaspersoft.studio.field.label" value="NOVA_TAG"/>
+	</field>
+	<variable name="Sequencia" class="java.lang.Integer" calculation="Count">
+		<variableExpression><![CDATA[$F{ID}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="-8" y="24" width="570" height="30" uuid="3aa5803a-5fdf-4652-9b62-2638fd0d1868"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Equipamento(s) Cadastrado(s)]]></text>
+			</staticText>
+			<line>
+				<reportElement x="-20" y="74" width="595" height="1" uuid="a7acc5ee-d949-4fee-9065-bc39cda04177"/>
+				<graphicElement>
+					<pen lineWidth="4.0" lineStyle="Solid"/>
+				</graphicElement>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="31" splitType="Stretch">
+			<rectangle>
+				<reportElement mode="Opaque" x="-20" y="-1" width="595" height="32" forecolor="#FFFFFF" backcolor="#1849AB" uuid="f490fb07-a58c-40e0-886c-cc5536cd09de"/>
+			</rectangle>
+			<line>
+				<reportElement x="-20" y="30" width="595" height="1" uuid="f53451cb-8e08-4af2-ac35-95efc435e5b3"/>
+			</line>
+			<staticText>
+				<reportElement x="-11" y="1" width="101" height="30" forecolor="#FFFFFF" uuid="9932c65f-2cfb-41a6-ae26-9c0bc3ce7e4c"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[CODIGO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="1" width="160" height="30" forecolor="#FFFFFF" uuid="e5afe6a2-1b90-472f-a0b1-c9d9e504073a"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[EQUIPAMENTO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="250" y="-1" width="40" height="30" forecolor="#FFFFFF" uuid="a4405267-ce41-4f03-a9b2-50f7e1179a65"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[UND]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="310" y="1" width="80" height="30" forecolor="#FFFFFF" uuid="33dfdac7-54ed-421b-8594-e8467cbbdb74"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[STATUS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="390" y="0" width="120" height="30" forecolor="#FFFFFF" uuid="d0381446-382f-4d78-8f89-ec0f75765182"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[SETOR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="510" y="0" width="62" height="30" forecolor="#FFFFFF" uuid="fa4ed937-8d77-49ee-bcfa-259812bd4fa7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[TAG]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="47">
+			<line>
+				<reportElement x="-20" y="30" width="595" height="1" uuid="78489d54-c3e2-4309-ae5a-6df01777a2af"/>
+			</line>
+			<textField>
+				<reportElement x="-11" y="-1" width="100" height="30" uuid="85d4e26b-2456-4bb3-bc98-38faacff8236"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{CODIGO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="90" y="0" width="160" height="30" uuid="83e4b61a-980c-4315-a7fd-d57763adf823"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{EQUIPAMENTO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="250" y="-1" width="40" height="30" uuid="51ce6898-318f-4fa4-a490-db30b7e3bf33"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{UND}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="310" y="0" width="80" height="30" uuid="6e5d6912-6b18-4c30-9c7a-3dcfa69f012d"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{STATUS}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="390" y="0" width="120" height="30" uuid="66ce1693-49ec-440d-9014-2a57d055dcc6"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{SETOR}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="510" y="0" width="62" height="30" uuid="a57cafff-126e-4751-b602-55b156dc1dfd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{NOVA_TAG}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="19" splitType="Stretch">
+			<textField>
+				<reportElement x="460" y="0" width="72" height="19" forecolor="#030202" uuid="17289f36-af7d-419c-92db-1c4790a3c500"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Página "+$V{PAGE_NUMBER}+" de"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="532" y="0" width="40" height="19" forecolor="#030202" uuid="84d4842e-bf5f-4fa4-b9cb-48bbd3c4b249"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+	<noData>
+		<band height="54">
+			<staticText>
+				<reportElement x="-8" y="24" width="570" height="30" uuid="8c3958ab-f5c2-481c-80b8-25183cd1ff9d"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sem resultados]]></text>
+			</staticText>
+		</band>
+	</noData>
+</jasperReport>
