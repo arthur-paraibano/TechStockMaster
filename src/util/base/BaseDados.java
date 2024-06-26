@@ -16,14 +16,13 @@ public class BaseDados {
     private static CriptografiaUtils criptoUtils = new CriptografiaUtils();
 
     private static Properties loadProperties() {
-        Properties props =
-        criptoUtils.obterPropriedadesDescriptografadas("db.properties.encrypted");
+        Properties props = criptoUtils.obterPropriedadesDescriptografadas("dbpessoal.properties.encrypted");
         // Properties props =
         // criptoUtils.obterPropriedadesDescriptografadas("dbpessoal.properties.encrypted");
         if (props != null) {
-        return props;
+            return props;
         } else {
-        throw new DbException("Erro ao obter propriedades descriptografadas.");
+            throw new DbException("Erro ao obter propriedades descriptografadas.");
         }
     }
 

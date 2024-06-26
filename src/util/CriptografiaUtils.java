@@ -1,4 +1,5 @@
 package util;
+
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStream;
@@ -22,10 +23,10 @@ public class CriptografiaUtils {
     private static final String SECRET_KEY_FILE = "secret.key";
 
     // Colocar dentro de um método
-       // CriptografiaUtils criptoUtils = new CriptografiaUtils();
-        // Exemplo de uso:
-        //criptoUtils.criptografarArquivo("dbLykos.properties");
-        // criptoUtils.descriptografarArquivo("db.properties.encrypted");
+    // CriptografiaUtils criptoUtils = new CriptografiaUtils();
+    // Exemplo de uso:
+    // criptoUtils.criptografarArquivo("dbLykos.properties");
+    // criptoUtils.descriptografarArquivo("db.properties.encrypted");
 
     // Método para gerar uma chave secreta e salvar em um arquivo
     private static SecretKey generateSecretKey() throws Exception {
@@ -162,7 +163,6 @@ public class CriptografiaUtils {
             return null;
         }
     }
-    
 
     // Método para criptografar uma string
     private static String encrypt(String input, Cipher cipher) throws Exception {
@@ -180,9 +180,9 @@ public class CriptografiaUtils {
 
     public static void main(String[] args) {
         // Colocar dentro de um método
-        //CriptografiaUtils criptoUtils = new CriptografiaUtils();
+        // CriptografiaUtils criptoUtils = new CriptografiaUtils();
         // Exemplo de uso:
-       //criptoUtils.criptografarArquivo("db.properties");
+        // criptoUtils.criptografarArquivo("dbpessoal.properties");
         // criptoUtils.descriptografarArquivo("db.properties.encrypted");
     }
 }

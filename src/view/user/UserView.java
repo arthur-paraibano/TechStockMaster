@@ -17,7 +17,7 @@ import util.EnterToTab;
 import util.TransformFieldUppcase;
 
 public class UserView extends javax.swing.JDialog {
-        private javax.swing.JButton jButt_Exit;       
+        private javax.swing.JButton jButt_Exit;
         private javax.swing.JButton jButt_Salvar;
         private javax.swing.JComboBox<String> jCBox_Acesso;
         private javax.swing.JComboBox<String> jCBox_TipoUser;
@@ -27,7 +27,7 @@ public class UserView extends javax.swing.JDialog {
         private javax.swing.JTextField jTexF_Usename;
         private javax.swing.JLabel jLabel5 = new javax.swing.JLabel();
         private javax.swing.JLabel jLabel3 = new javax.swing.JLabel();
-        private  javax.swing.JButton jButt_Limpar = new javax.swing.JButton();
+        private javax.swing.JButton jButt_Limpar = new javax.swing.JButton();
         private UserController controller = new UserController();
         private final User userSelect;
 
@@ -83,7 +83,8 @@ public class UserView extends javax.swing.JDialog {
                 String senha = jTexF_Senha.getText().toUpperCase();
                 String acesso = String.valueOf(jCBox_Acesso.getSelectedItem()).toUpperCase();
                 String tipo = String.valueOf(jCBox_TipoUser.getSelectedItem()).toUpperCase();
-                User object = new User((userSelect == null ? 0 : userSelect.getId()), nomeCompleto, gmail, username, senha, acesso, tipo);
+                User object = new User((userSelect == null ? 0 : userSelect.getId()), nomeCompleto, gmail, username,
+                                senha, acesso, tipo);
                 boolean value = controller.addOrUpdate(object);
                 if (value) {
                         if (this.userSelect == null) {
@@ -114,7 +115,7 @@ public class UserView extends javax.swing.JDialog {
                 jTexF_Senha = new javax.swing.JTextField();
                 jTexF_Gmail = new javax.swing.JTextField();
                 javax.swing.JLabel jLabel4 = new javax.swing.JLabel();
-               
+
                 jButt_Exit = new javax.swing.JButton();
                 jButt_Salvar = new javax.swing.JButton();
                 javax.swing.JLabel jLabel6 = new javax.swing.JLabel();
